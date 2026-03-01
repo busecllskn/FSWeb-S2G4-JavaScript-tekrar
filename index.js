@@ -102,7 +102,26 @@ let ucetambolunenler,
 
 // 3a çözümü
 
-/* kodlar buraya */
+enkucuk = sayilar[0];
+for(let i=0; i < sayilar.length; i++){
+  const sayi = sayilar[i];
+  if (sayi < enkucuk) {
+    enkucuk = sayi
+  }
+}
+
+console.log("En küçük sayi:", enkucuk);
+
+
+enbuyuk = sayilar[0];
+for(let i=0; i < sayilar.length; i++){
+  const sayi = sayilar[i];
+  if (sayi > enbuyuk) {
+    enbuyuk = sayi
+  }
+}
+
+console.log("En büyük sayi:", enbuyuk);
 
 // 3b çözümü:
 
