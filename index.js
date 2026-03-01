@@ -135,19 +135,52 @@ console.log("üçe tam bölünenler: ", ucetambolunenler);
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
+
+console.log("3'e bölünenlerin toplamı:", ucebolunenlerintoplami);
+
 
 // 3d çözümü
 
-/* kodlar buraya */
+
+besyuzdenkucuksayilar =
+  sayilar.filter((sayi) => sayi < 500);
+
+console.log("500'den küçük sayılar:", besyuzdenkucuksayilar);
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar =
+  [...besyuzdenkucuksayilar].sort((a, b) => a - b);
+
+console.log("Sıralı sayılar:", siralisayilar);
 
 // 3f çözümü
 
-/* kodlar buraya */
+const tekrarSayaci = {};
+tekraredensayilar = [];
+
+/* 1. döngü → kaç kere geçtiğini bul */
+for (let i = 0; i < sayilar.length; i++) {
+  let sayi = sayilar[i];
+
+  if (tekrarSayaci[sayi]) {
+    tekrarSayaci[sayi]++;
+  } else {
+    tekrarSayaci[sayi] = 1;
+  }
+}
+
+/* 2. döngü → string oluştur */
+for (let sayi in tekrarSayaci) {
+  if (tekrarSayaci[sayi] > 1) {
+    tekraredensayilar.push(
+      `${sayi} sayısı ${tekrarSayaci[sayi]} kere tekrar edilmiştir`
+    );
+  }
+}
+
+console.log("Tekrar eden sayılar:", tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
